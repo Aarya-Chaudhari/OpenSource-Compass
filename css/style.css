@@ -192,6 +192,14 @@ section p {
     font-size: 12px;
     margin-top: 10px;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.smooth-scroll {
+  transition: all 0.3s ease;
+}
+
 
 /* =========================
    Footer
