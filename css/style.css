@@ -184,10 +184,17 @@ section p {
 
 /* Glassmorphism Pattern */
 .card {
-    background-color: var(--white);
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card h4 {
