@@ -3,7 +3,7 @@
 # 🌍 OpenSource Compass  
 ### Navigate Your Open Source Journey with Confidence
 
-<img src="assets/updated image.png" alt="OpenSource Compass – SWOC'26 Banner" width="100%" />
+<img src="frontend/library/assets/swoc_banner.png" alt="OpenSource Compass – SWOC'26 Banner" width="100%" />
 
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/sayeeg-11/OpenSource-Compass)
 [![GitHub Issues](https://img.shields.io/github/issues/sayeeg-11/OpenSource-Compass)](https://github.com/sayeeg-11/OpenSource-Compass/issues)
@@ -211,6 +211,27 @@ OpenSource-Compass/
 > Mentors guide contributors, review pull requests, and provide feedback throughout SWOC’26.
 
 ---
+
+<div align="left">
+
+## 🌍 Community & Contributors
+
+### 💖 Contributors  
+Thanks to these amazing people who have contributed to **OpenSource Compass** ✨  
+
+<a href="https://github.com/sayeeg-11/OpenSource-Compass/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sayeeg-11/OpenSource-Compass" alt="Contributors" />
+</a>
+
+<br/><br/>
+
+### ⭐ Project Support
+
+[![Stars](https://img.shields.io/github/stars/sayeeg-11/OpenSource-Compass?style=social)](https://github.com/sayeeg-11/OpenSource-Compass/stargazers)
+&nbsp;&nbsp;
+[![Forks](https://img.shields.io/github/forks/sayeeg-11/OpenSource-Compass?style=social)](https://github.com/sayeeg-11/OpenSource-Compass/network/members)
+
+</div>
 
 ## 🤝 Contribution Guidelines (SWOC’26)
 

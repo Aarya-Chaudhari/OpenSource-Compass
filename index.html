@@ -449,20 +449,7 @@
 </head>
 <body>
     <!-- Same HTML structure as before, no changes needed -->
-    <header>
-        <div class="navbar-container">
-            <h1><i class="fas fa-compass" style="color: var(--primary-gold); margin-right: 0.4rem;"></i>OpenSource Compass</h1>
-            <div class="nav-links">
-                <a href="/index.html">Home</a>
-                <a href="./frontend/pages/guides.html">Guides</a>
-                <a href="./frontend/pages/programs.html">Programs</a>
-                <a href="./frontend/pages/Resources.html">Resources</a>
-                <a href="./frontend/pages/contributors.html">Contributors</a>
-                <a href="./frontend/pages/faq.html">FAQ</a>
-                <a href="./frontend/pages/Contribute.html">Contribute</a>
-            </div>
-        </div>
-    </header>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -537,9 +524,7 @@
         </form>
     </section>
 
-    <footer>
-        <p><i class="fas fa-heart" style="color: var(--primary-gold); margin-right: 0.4rem;"></i>© 2026 OpenSource Compass   <a href="https://github.com/sayeeg-11/opensource-compass" target="_blank">GitHub</a></p>
-    </footer>
+    <div id="footer"></div>
 
     <button id="scrollTopBtn" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
 
@@ -575,5 +560,7 @@
             document.querySelector('.hero').style.transform = `translateY(${scrolled}px)`;
         });
     </script>
+    <script src="/frontend/js/components.js"></script>
+    <script src="/frontend/js/theme.js"></script>
 </body>
 </html>
