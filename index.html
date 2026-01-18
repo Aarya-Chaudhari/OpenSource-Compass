@@ -942,12 +942,11 @@
       };
     </script>
   </body>
-=======
 <head>
     <meta charset="UTF-8">
     <title>OpenSource Compass - Classic Edition</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/ss2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
@@ -1097,6 +1096,9 @@
 <ink href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;500&family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/frontend/library/assets/favicon.png" type="image/png" />
     <style>
         :root {
             --primary-gold: #D4AF37;
@@ -1221,16 +1223,12 @@
         }
 
         .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.4rem, 6vw, 3.8rem); /* Smaller hero */
-            font-weight: 700;
-            background: linear-gradient(135deg, #3E2A14 0%, #6B4A2D 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1.5rem;
-            line-height: 1.15;
-            text-shadow: 0 6px 24px rgba(0,0,0,0.25);
+           font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 5vw, 3.4rem);
+    font-weight: 700;
+    color: var(--charcoal-dark); /* dark grey for contrast */
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.6);
         }
 
         .hero p {
@@ -1269,8 +1267,7 @@
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.2rem, 4.5vw, 2.9rem); /* Smaller section titles */
             font-weight: 700;
-            color:#7A6A58
-;
+            color: var(--deep-navy);
             text-align: center;
             margin-bottom: 1.2rem;
             position: relative;
@@ -1406,6 +1403,14 @@
         .programs .card p {
             color: rgba(255,255,255,0.9);
         }
+        .programs h3 {
+    color: var(--primary-white);
+}
+
+.programs p {
+   color: #f1f1f1;
+}
+
 
         /* Newsletter - Smaller */
         .newsletter {
@@ -1496,6 +1501,38 @@
             transition: all 0.35s ease;
             z-index: 999;
         }
+        /* Dark Mode Variable Overrides */
+        body.dark-mode {
+    --warm-cream: #0D1117;
+    --light-parchment: #161B22;
+    --charcoal-dark: #F0F6FC;
+    --text-secondary: #8B949E;
+    --deep-navy: #ECF0F1;
+}
+
+/* Specific Dark Mode Adjustments */
+body.dark-mode header {
+    background: rgba(13, 17, 23, 0.98);
+}
+
+body.dark-mode .card {
+    background: rgba(22, 27, 34, 0.95);
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+body.dark-mode .hero {
+    background: 
+        radial-gradient(ellipse at center, rgba(13, 17, 23, 0.85) 0%, transparent 70%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23D4AF37" stop-opacity="0.2"/><stop offset="50%" stop-color="%230D1117"/><stop offset="100%" stop-color="%23B8860B" stop-opacity="0.1"/></linearGradient></defs><rect width="1200" height="700" fill="url(%23g)"/><path d="M0 300Q300 150 600 280Q900 400 1200 280L1200 700L0 700Z" fill="%23D4AF37" opacity="0.1"/></svg>') center/cover;
+}
+
+body.dark-mode .hero p {
+    color: var(--charcoal-dark);
+}
+
+body.dark-mode .programs {
+    background: linear-gradient(135deg, #010409 0%, #0D1117 100%);
+}
 
         /* Responsive Adjustments */
         @media (max-width: 1024px) {
@@ -1510,65 +1547,24 @@
             }
           }
 
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
-    margin-bottom: 24px;
-}
+            .navbar-container {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
 
-.footer-section h3,
-.footer-section h4 {
-    margin-bottom: 12px;
-    font-size: 18px;
-    color: var(--white);
-}
+            .nav-links {
+                gap: 1.2rem;
+            }
 
-.footer-section p {
-    font-size: 14px;
-    opacity: 0.9;
-    max-width: 280px;
-}
+            section {
+                padding: 4rem 5%;
+            }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-    opacity: 1;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
-    padding-top: 16px;
-    text-align: center;
-    font-size: 13px;
-    opacity: 0.85;
-}
-
-/* ---------- Footer Responsive ---------- */
-@media (max-width: 600px) {
-    .footer {
-        padding: 40px 6% 20px;
-    }
-
-    .footer-section p {
-        max-width: 100%;
-    }
-}
+            .hero {
+                padding: 2.5rem 5%;
+                min-height: 85vh;
+            }
+        }
 
         @media (max-width: 480px) {
             body {
@@ -1579,42 +1575,56 @@
                 font-size: 0.92rem;
             }
         }
+    </style>
 
-     /* ===============================
-   PROGRAMS CARD HOVER (GSSoC, SWoC etc.)
-   =============================== */
 
-.programs .card {
-  transition: 
-    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.45s ease;
-  will-change: transform;
+    <!-- google translate style  -->
+     <style>
+      /* --- CUSTOM LANGUAGE SELECTOR --- */
+.language-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;  /* Width of the clickable area */
+    height: 30px; /* Height of the clickable area */
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-.programs .card:hover {
-  transform: scale(1.06) translateY(-10px);
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+/* 1. Style the Globe Icon */
+.language-wrapper i {
+    font-size: 1.3rem; /* Icon size */
+    color: var(--charcoal-dark); /* Matches your theme */
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* Sits at the bottom */
 }
 
-/* ===============================
-   BADGE (Jan 2026) – EXTRA GLOW
-   =============================== */
-
-.programs .badge {
-  transition:
-    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.35s ease,
-    filter 0.35s ease;
-  cursor: pointer;
+.language-wrapper:hover i {
+    color: var(--primary-gold); /* Gold on hover */
+    transform: rotate(15deg);   /* Slight spin effect */
 }
 
-.programs .badge:hover {
-  transform: scale(1.3) translateY(-6px);
-  box-shadow:
-    0 0 15px rgba(212, 175, 55, 0.8),
-    0 0 30px rgba(212, 175, 55, 0.6),
-    0 0 45px rgba(212, 175, 55, 0.4);
-  filter: brightness(1.2);
+/* 2. Hide the Google Widget but keep it clickable */
+#google_translate_element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* MAKES IT INVISIBLE */
+    z-index: 2; /* Sits on top of the icon to capture clicks */
+    overflow: hidden;
+}
+
+/* 3. Force Google's inner element to fill the clickable area */
+.goog-te-gadget-simple {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    display: block !important;
 }
  
 @media (max-width: 450px) {
@@ -1624,10 +1634,49 @@
 }
 
     </style>
+
+/* 4. Hide the top Google banner */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+/* Dark Mode Support */
+body.dark-mode .language-wrapper i {
+    color: #ffffff !important; /* Forces the icon to be White */
+}
+
+body.dark-mode .language-wrapper:hover i {
+    color: var(--primary-gold) !important; /* Gold on hover */
+}
+     </style>
 </head>
 <body>
     <!-- Same HTML structure as before, no changes needed -->
+    <header>
+        <div class="navbar-container">
+            <h1><i class="fas fa-compass" style="color: var(--primary-gold); margin-right: 0.4rem;"></i>OpenSource Compass</h1>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="./frontend/pages/guides.html">Guides</a>
+                <a href="./frontend/pages/programs.html">Programs</a>
+                <a href="./frontend/pages/Resources.html">Resources</a>
+                <a href="./frontend/pages/contributors.html">Contributors</a>
+                <a href="./frontend/pages/faq.html">FAQ</a>
+                <a href="./frontend/pages/Contribute.html">Contribute</a>
+                <div class="language-wrapper">
+    <i class="fas fa-globe"></i>
+    <div id="google_translate_element"></div>
+</div>
 
+                <button id="themeToggle" title="Toggle Dark Mode" style="background: none; border: none; color: var(--primary-gold); cursor: pointer; font-size: 1.1rem; margin-left: 0.5rem; transition: transform 0.3s ease;">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
     <section class="hero">
         <div class="hero-content">
@@ -1701,8 +1750,10 @@
             <button type="submit"><i class="fas fa-paper-plane" style="margin-right: 0.4rem;"></i>Subscribe</button>
         </form>
     </section>
-
     <div id="footer"></div> 
+    <footer>
+        <p><i class="fas fa-heart" style="color: var(--primary-gold); margin-right: 0.4rem;"></i>© 2026 OpenSource Compass   <a href="https://github.com/sayeeg-11/opensource-compass" target="_blank">GitHub</a></p>
+    </footer>
 
     <button id="scrollTopBtn" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
 
@@ -1736,8 +1787,45 @@
             const scrolled = window.pageYOffset * 0.3;
             document.querySelector('.hero').style.transform = `translateY(${scrolled}px)`;
         });
+
+        /* Add this to the existing <script> in index.html */
+
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+
+// Check for saved user preference
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Update icon and save preference
+    if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+    }
+    
+    // Subtle button animation
+    themeToggle.style.transform = 'scale(1.2)';
+    setTimeout(() => themeToggle.style.transform = 'scale(1)', 200);
+});
     </script>
-    <script src="/frontend/js/components.js"></script>
-    <script src="/frontend/js/theme.js"></script>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            // This 'SIMPLE' setting is required for the CSS to work
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
