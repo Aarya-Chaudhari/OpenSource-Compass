@@ -586,6 +586,69 @@
             font-weight: 500;
         }
 
+        /* ---------- GSoC Tips Section ---------- */
+.gsoc-tips-section {
+    padding: 80px 8%;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.gsoc-tips-section h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.gsoc-tips-section p {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.gsoc-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gsoc-tip-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+}
+
+.gsoc-tip-card i {
+    font-size: 28px;
+    color: var(--secondary-blue);
+    margin-bottom: 15px;
+}
+
+.gsoc-tip-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.gsoc-tip-card p {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.gsoc-tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+
         /* ---------- CTA Section ---------- */
         .cta-section {
             padding: 80px 8%;
@@ -1080,6 +1143,50 @@
             </div>
         </div>
     </section>
+
+    <!-- Tips to Get Selected for GSoC -->
+<section class="gsoc-tips-section">
+    <h2>Tips to Get Selected for GSoC</h2>
+    <p>Practical strategies that significantly increase your chances of getting accepted into Google Summer of Code.</p>
+
+    <div class="gsoc-tips-grid">
+        <div class="gsoc-tip-card">
+            <i class="fas fa-code-branch"></i>
+            <h3>Start Contributing Early</h3>
+            <p>Begin contributing to open source projects before the application period to build credibility and familiarity with the codebase.</p>
+        </div>
+
+        <div class="gsoc-tip-card">
+            <i class="fas fa-bug"></i>
+            <h3>Pick Beginner-Friendly Issues</h3>
+            <p>Look for “good first issue” or “beginner-friendly” tags to understand the project structure and workflow.</p>
+        </div>
+
+        <div class="gsoc-tip-card">
+            <i class="fas fa-users"></i>
+            <h3>Communicate with Mentors</h3>
+            <p>Actively interact in community channels like Discord, Slack, or mailing lists to show genuine interest.</p>
+        </div>
+
+        <div class="gsoc-tip-card">
+            <i class="fas fa-file-alt"></i>
+            <h3>Write a Strong Proposal</h3>
+            <p>Create a detailed proposal with technical approach, timeline, and expected deliverables to stand out.</p>
+        </div>
+
+        <div class="gsoc-tip-card">
+            <i class="fas fa-clock"></i>
+            <h3>Be Consistent</h3>
+            <p>Regular contributions and consistent activity show commitment and reliability to mentors.</p>
+        </div>
+
+        <div class="gsoc-tip-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Understand the Codebase</h3>
+            <p>Study documentation, past PRs, and project architecture before proposing your idea.</p>
+        </div>
+    </div>
+</section>
 
     <!-- CTA Section -->
     <section class="cta-section">
