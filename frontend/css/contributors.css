@@ -972,3 +972,107 @@
   margin-bottom: 20px;
   color: #6b7280;
 }
+
+/* ===== Top Contributors Highlight Section ===== */
+.top-contributors-section {
+  max-width: 1100px;
+  margin: 40px auto 20px;
+  padding: 30px 24px;
+  background: linear-gradient(135deg, #fffaf0, #fff7e6);
+  border-radius: 20px;
+  border: 1px solid #f1e3b0;
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.15);
+  text-align: center;
+}
+
+
+.top-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #b8860b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-title i {
+  color: #d4af37;
+}
+
+.top-contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Highlight Top Cards */
+.top-contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Rank Badge */
+.top-contributors-grid .contributor-card::before {
+  content: "🏆 Top";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d4af37;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.top-contributors-grid .contributor-card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Hover Effect */
+.top-contributors-grid .contributor-card:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.25);
+}
+
+/* Dark Mode Support */
+body.dark-mode .top-contributors-section {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  border: 1px solid #374151;
+}
+
+body.dark-mode .top-title {
+  color: #facc15;
+}
+.top-card {
+  transform: scale(1.05);
+  border: 2px solid #f0d98c;
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.18);
+  position: relative;
+}
+
+.top-rank-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 20px;
+}
+
+.contributor-chip.is-top {
+  background: #fff3cd;
+  color: #856404;
+  font-weight: 600;
+}
+
